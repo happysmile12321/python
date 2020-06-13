@@ -35,18 +35,24 @@ pygame.display.get_caption()
 # 窗口感知和刷新
 
 
-# 当窗口在系统中显示--屏幕绘制--非图标化
+# 当窗口在系统中显示--屏幕绘制--非图标化时返回True，否则返回False
 pygame.display.get_active()
+#isactive = pygame.display.get_active()
+#if(isactive):
+#    print('屏幕绘制')
+#else:
+#    print('非屏幕绘制')
+# 可以判断屏幕是否被最小化
 
 
+
+## update VS flip
+# 执行程序中变化的那部分
 pygame.display.flip()
-
-
+# 只执行程序中变化的那部分,update比flip变化速度更快
 pygame.display.update()
+## 建议使用update函数
+
 
 # pygame还可以支持OpenGL 和 硬件加速
 # surf https://www.pygame.org
-
-
-
-

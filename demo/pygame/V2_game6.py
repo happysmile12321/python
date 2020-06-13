@@ -1,6 +1,8 @@
 import pygame,sys
 pygame.init()
 
+# 鼠标左键是否按下
+Still = False
 Vinfo = pygame.display.Info()
 #border = (width,height) = Vinfo.current_w,Vinfo.current_h
 border = (width,height) = 800,600
@@ -37,8 +39,17 @@ while True:
         elif event.type == pygame.VIDEORESIZE:
             size = width,height = event.size[0],event[1]
             screen = pygame.display.set_mode(size,pygame.RESIZABLE)
-    # 只有窗口获得焦点，小球才会移动
-    if pygame.display.get_active():
+        elif event.type == pygame.MOUSEBUTTONDOWN:
+            if event.button == 1:
+                Still = True 
+        elif event.type == pygame.MOUSEBUTTONUP:
+            Still = False
+            if event.button == 1:
+                catrect = catrect.move(event.pos[0]-catrect.left,event.pos[1]-catrect.right)
+        elif event.type == pygame.MOUSEMOTION:
+            if event.buttons[0] == 1:
+                catrect = catrect.move(event.pos[0]-catrect.left,event.pos[1]-catrect.right)
+    if not Still:
         catrect = catrect.move(speed[0],speed[1])
     if catrect.left < 0 or catrect.right > width:
             speed[0]=-speed[0]
