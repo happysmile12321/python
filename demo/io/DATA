@@ -1,0 +1,40 @@
+/
+├── bin -> usr/bin
+├── boot
+│   ├── EFI
+│   │   └── arch
+│   │       └── grubx64.efi
+│   ├── grub
+│   │   ├── fonts
+│   │   │   └── unicode.pf2
+│   │   ├── grub.cfg
+│   │   ├── grubenv
+│   │   ├── themes
+│   │   │   └── starfield
+│   │   │       ├── blob_w.png
+│   │   │       ├── boot_menu_c.png
+│   │   │       ├── boot_menu_e.png
+│   │   │       ├── boot_menu_ne.png
+│   │   │       ├── boot_menu_n.png
+│   │   │       ├── boot_menu_nw.png
+│   │   │       ├── boot_menu_se.png
+│   │   │       ├── boot_menu_s.png
+│   │   │       ├── boot_menu_sw.png
+│   │   │       ├── boot_menu_w.png
+│   │   │       ├── COPYING.CC-BY-SA-3.0
+│   │   │       ├── dejavu_10.pf2
+│   │   │       ├── dejavu_12.pf2
+│   │   │       ├── dejavu_14.pf2
+│   │   │       ├── dejavu_16.pf2
+│   │   │       ├── dejavu_bold_14.pf2
+│   │   │       ├── README
+│   │   │       ├── slider_c.png
+│   │   │       ├── slider_n.png
+│   │   │       ├── slider_s.png
+│   │   │       ├── starfield.png
+│   │   │       ├── terminal_box_c.png
+│   │   │       ├── terminal_box_e.png
+│   │   │       ├── terminal_box_ne.png
+│   │   │       ├── terminal_box_n.png
+│   │   │       ├── terminal_box_nw.png
+│   │   │       ├── terminal_box_se.png
