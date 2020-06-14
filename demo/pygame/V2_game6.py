@@ -49,6 +49,7 @@ while True:
         elif event.type == pygame.MOUSEMOTION:
             if event.buttons[0] == 1:
                 catrect = catrect.move(event.pos[0]-catrect.left,event.pos[1]-catrect.right)
+        print(pygame.event.poll()) 
     if not Still:
         catrect = catrect.move(speed[0],speed[1])
     if catrect.left < 0 or catrect.right > width:

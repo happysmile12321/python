@@ -41,20 +41,36 @@ if event.type == pygame.KEYDOWN:
 #　处理事件
 
 pygame.event.get()
+
+
+#只获取1个单一事件，然后将事件删除
+#如果没有事件，则返回<no-event>
 pygame.event.poll()
+
+#默认删除所有事件
 pygame.event.clear()
+
+pygame事件队列仅能存储128个队列
+
+
 
 #　操作事件队列
 
-pygame.event.set_blocked()
-pygame.event.get_blocked()
-pygame.event.set_allowed()
+pygame.event.set_blocked(type or typelist)
 
+# 测试某个事件类型是否被禁止，如果被禁止，则返回true
+# 否则，返回false
+pygame.event.get_blocked(type)
+
+pygame.event.set_allowed(type or typelist)
 
 #　生成事件
 
-pygame.event.post()
-pygame.event.Event()
+# 获得1个用户定义的事件
+pygame.event.post(Event)
+
+# 创建1个给定类型的事件
+pygame.event.Event(type,dict) #类型，属性
 
 
 #　键盘事件
