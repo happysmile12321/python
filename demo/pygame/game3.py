@@ -1,7 +1,7 @@
 import pygame,sys
 pygame.init()
 border = (width,height) = 800,600
-screen = pygame.display.set_mode(border)
+screen = pygame.display.set_mode(border,flags=pygame.RESIZABLE)
 # pygame support jpg,png,gif ... 
 cat = pygame.image.load("res/xiaobai.png")
 speed=[1,1]
@@ -18,7 +18,6 @@ catrect = cat.get_rect()
 
 fps = 120
 fclock = pygame.time.Clock()
-
 #控制帧速度，即窗口刷新速度：
 #clock.tick(100)表示每秒钟100次刷新帧
 #tick 滴答声
