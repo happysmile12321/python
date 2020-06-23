@@ -11,9 +11,14 @@ headers = {
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36"
 }
 #处理https,获得get对象
-response = requests.get(url, headers=headers)
+response = requests.get(url, headers=headers, verify=False)
+#response = requests.get(url, headers=headers, verify='./c.p7b')
 #处理乱码
 response.encoding = 'utf-8'
+
+#debug
+print(response.status_code)
+##
 #获取html文本对象
 html = response.text
 #专门讲response赋值给html好后面操作
@@ -31,7 +36,7 @@ imgs_url = []
 for i in imgs:
     imgs_url.append(i)
 for index, img_url in enumerate(imgs_url[2:]):
-    #    time.sleep(3)
+    time.sleep(3)
     response = requests.get(img_url)
     with open('%s.%s' % (index, "jpg"), 'wb') as f:
         f.write(response.content)
