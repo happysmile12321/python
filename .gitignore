@@ -1,6 +1,5 @@
-
-python_JARVIS/asr/a1.py
-python_JARVIS/asr/asr_json_baiduoffical.py
-python_JARVIS/asr/asr_raw_baiduoffical.py
-python_JARVIS/asr/xxx.wav
+python_search/*
+python_JARVIS/*
 1.wav
+
+python_JARVIS/doc/\351\241\271\347\233\256\346\234\210\346\212\245.md
